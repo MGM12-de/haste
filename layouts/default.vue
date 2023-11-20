@@ -3,6 +3,7 @@
         <div>
             <appHeader />
         </div>
+        <UNotifications />
         <div class="w-auto h-auto ml-10 mr-10">
             <slot />
         </div>

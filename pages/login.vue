@@ -4,6 +4,15 @@
 
         <UPageBody>
 
+            <UButton label="Login" @click="login" />
         </UPageBody>
     </UPage>
 </template>
+
+<script setup lang="ts">
+
+
+const login = () => {
+    useToast().add({ title: 'Login successfully' })
+}
+</script>
