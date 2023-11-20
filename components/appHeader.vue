@@ -24,6 +24,10 @@ const links = [{
     icon: 'i-heroicons-book-open',
     to: '/about'
 }, {
+    label: 'Prices',
+    icon: 'i-heroicons-currency-euro',
+    to: '/prices'
+}, {
     label: 'Login',
     icon: 'i-heroicons-user-circle',
     to: '/login'
