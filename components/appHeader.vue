@@ -6,6 +6,12 @@
 
         <template #right>
             <UColorModeButton />
+            <UPopover>
+                <UAvatar src="https://avatars.githubusercontent.com/u/739984?v=4" alt="Avatar" />
+                <template #panel>
+                    <UVerticalNavigation :links="userLinks" />
+                </template>
+            </UPopover>
         </template>
 
         <template #panel>
@@ -31,5 +37,10 @@ const links = [{
     label: 'Login',
     icon: 'i-heroicons-user-circle',
     to: '/login'
+}]
+const userLinks = [{
+    label: 'Logout',
+    icon: 'i-heroicons-user',
+    to: '/logout'
 }]
 </script>
