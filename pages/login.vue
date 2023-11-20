@@ -64,6 +64,7 @@ const login = async () => {
         useToast().add({ title: 'Login failed', description: error.message })
     } else {
         useToast().add({ title: 'Login successfully', description: 'You can now access your private data.' })
+        navigateTo('/')
     }
 }
 
@@ -78,6 +79,7 @@ const register = async () => {
         useToast().add({ title: 'Sign-Up failed', description: error.message })
     } else {
         useToast().add({ title: 'Sign-Up successfully', description: 'You can now access your private data.' })
+        navigateTo('/')
     }
 }
 </script>

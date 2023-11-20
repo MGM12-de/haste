@@ -23,7 +23,7 @@
 <script setup lang="ts">
 const user = useSupabaseUser()
 
-var links = [{
+const links = [{
     label: 'Home',
     icon: 'i-heroicons-home',
     to: '/'
@@ -35,15 +35,11 @@ var links = [{
     label: 'Prices',
     icon: 'i-heroicons-currency-euro',
     to: '/prices'
+}, {
+    label: 'Login',
+    icon: 'i-heroicons-user-circle',
+    to: '/login'
 }]
-
-if (!user) {
-    links.push({
-        label: 'Login',
-        icon: 'i-heroicons-user-circle',
-        to: '/login'
-    })
-}
 const userLinks = [{
     label: 'Logout',
     icon: 'i-heroicons-user',
