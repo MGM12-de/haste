@@ -16,12 +16,12 @@
 
 <script setup lang="ts">
 const links = [{
-    label: 'Documentation',
+    label: 'About',
     icon: 'i-heroicons-book-open',
-    to: '/getting-started'
+    to: '/about'
 }, {
-    label: 'Pro',
-    icon: 'i-heroicons-square-3-stack-3d',
-    to: '/pro'
+    label: 'Login',
+    icon: 'i-heroicons-user-circle',
+    to: '/login'
 }]
 </script>
