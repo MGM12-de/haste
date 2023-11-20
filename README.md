@@ -1,2 +1,2 @@
-# haste
+# HaStE
 Handball statistic expert
