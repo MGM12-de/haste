@@ -6,7 +6,7 @@
 
         <template #right>
             <UColorModeButton />
-            <UPopover>
+            <UPopover v-if="user">
                 <UAvatar src="https://avatars.githubusercontent.com/u/739984?v=4" alt="Avatar" />
                 <template #panel>
                     <UVerticalNavigation :links="userLinks" />
@@ -21,7 +21,9 @@
 </template>
 
 <script setup lang="ts">
-const links = [{
+const user = useSupabaseUser()
+
+var links = [{
     label: 'Home',
     icon: 'i-heroicons-home',
     to: '/'
@@ -33,11 +35,15 @@ const links = [{
     label: 'Prices',
     icon: 'i-heroicons-currency-euro',
     to: '/prices'
-}, {
-    label: 'Login',
-    icon: 'i-heroicons-user-circle',
-    to: '/login'
 }]
+
+if (!user) {
+    links.push({
+        label: 'Login',
+        icon: 'i-heroicons-user-circle',
+        to: '/login'
+    })
+}
 const userLinks = [{
     label: 'Logout',
     icon: 'i-heroicons-user',
