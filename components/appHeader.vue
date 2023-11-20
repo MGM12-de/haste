@@ -16,6 +16,10 @@
 
 <script setup lang="ts">
 const links = [{
+    label: 'Home',
+    icon: 'i-heroicons-home',
+    to: '/'
+}, {
     label: 'About',
     icon: 'i-heroicons-book-open',
     to: '/about'
