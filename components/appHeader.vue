@@ -41,8 +41,12 @@ const links = [{
     to: '/login'
 }]
 const userLinks = [{
-    label: 'Logout',
+    label: 'Profile',
     icon: 'i-heroicons-user',
+    to: '/profile'
+}, {
+    label: 'Logout',
+    icon: 'i-heroicons-arrow-left-on-rectangle',
     to: '/logout'
 }]
 </script>
