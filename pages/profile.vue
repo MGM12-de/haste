@@ -2,7 +2,7 @@
     <UPage>
         <UPageHeader title="Profile" />
         <UPageBody>
-            <UserAvatar />
+            <UserProfileCard />
         </UPageBody>
     </UPage>
 </template>
