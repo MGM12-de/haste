@@ -1,17 +1,50 @@
 <script setup lang="ts">
 const user = useSupabaseUser()
+const supabase = useSupabaseClient()
+
 const userData = user.value;
-var userAvatar = "";
-var editable = false;
+var editable = true;
 
 const state = reactive({
     email: userData?.email,
     phone: userData?.phone,
-    id: userData?.id
+    id: userData?.id,
+    username: ""
 })
 
-const onUpdate = () => {
+await supabase
+    .from('profiles')
+    .select('id, username')
+    .eq('id', userData?.id)
+    .then(({ data, error }) => {
+        if (error) {
+            console.log(error)
+        } else {
+            if (data.length > 0) {
+                state.username = data[0].username;
+            }
+        }
+    })
 
+
+
+const onUpdate = async () => {
+    const updates = {
+        id: userData?.id,
+        avatar_url: "https://avatars.dicebear.com/api/avataaars/John.svg",
+        username: state.username,
+        updated_at: new Date()
+    }
+
+    const { error } = await supabase.from('profiles').upsert(updates, {
+        returning: 'minimal', // Don't return the value after inserting
+    })
+
+    if (error) {
+        useToast().add({ title: 'Updated failed', description: error.message })
+    } else {
+        useToast().add({ title: 'Updated successfully', description: 'Profile data was updated.' })
+    }
 }
 
 </script>
@@ -31,6 +64,10 @@ const onUpdate = () => {
             </UFormGroup>
             <UFormGroup label="Phone" name="phone">
                 <UInput v-model="state.phone" :disabled="!editable" />
+            </UFormGroup>
+
+            <UFormGroup label="Username" name="username">
+                <UInput v-model="state.username" :disabled="!editable" />
             </UFormGroup>
 
             <UButton type="submit" :disabled="!editable">
