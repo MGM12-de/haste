@@ -4,6 +4,15 @@
             <appLogo class="w-auto h-6" />
         </template>
 
+        <template #center>
+            <div v-if="user">
+                <UHeaderLinks :links="loggedLinks" />
+            </div>
+            <div v-else>
+                <UHeaderLinks :links="links" />
+            </div>
+        </template>
+
         <template #right>
             <UColorModeButton />
             <UPopover v-if="user">
@@ -23,7 +32,7 @@
 <script setup lang="ts">
 const user = useSupabaseUser()
 
-const links = [{
+var links = [{
     label: 'Home',
     icon: 'i-heroicons-home',
     to: '/'
@@ -31,15 +40,20 @@ const links = [{
     label: 'About',
     icon: 'i-heroicons-book-open',
     to: '/about'
-}, {
+}]
+const loggedLinks = [...links];
+
+links.push({
     label: 'Prices',
     icon: 'i-heroicons-currency-euro',
     to: '/prices'
-}, {
+});
+links.push({
     label: 'Login',
     icon: 'i-heroicons-user-circle',
     to: '/login'
-}]
+});
+
 const userLinks = [{
     label: 'Profile',
     icon: 'i-heroicons-user',
