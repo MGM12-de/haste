@@ -3,7 +3,7 @@
         <UPageHeader title="Teams" />
         <UPageBody>
 
-            <UTable :rows="teams" :loading="loading" />
+            <UTable :rows="teams" :loading="pending" />
 
         </UPageBody>
     </UPage>
@@ -12,20 +12,10 @@
 <script setup lang="ts">
 import type { Team } from '~/types';
 const supabase = useSupabaseClient();
-var teams: Team[] = [];
-var loading = true;
 
-supabase.from('teams').select('*').then(({ data, error }) => {
-    if (error) {
-        useToast().add({ title: 'Teams read failed', description: error.message })
-        console.log(error);
-    } else {
-        if (data.length > 0) {
-            teams = data;
-        }
-    }
-    loading = false;
+const { pending, data: teams } = await useAsyncData('teams', async () => {
+    const { data } = await supabase.from('teams').select('*');
+    return data
 });
-
 
 </script>
