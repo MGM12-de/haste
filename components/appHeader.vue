@@ -42,6 +42,10 @@ const loggedLinks = [...allLinks, {
     label: 'Games',
     icon: 'i-heroicons-game-controller',
     to: '/games'
+}, {
+    label: 'Teams',
+    icon: 'i-heroicons-users',
+    to: '/teams'
 }];
 
 const links = [...allLinks, {
