@@ -8,7 +8,7 @@
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
-    "generate-pwa-assets": "pwa-assets-generator --preset minimal public/logo.jpeg"
+    "generate-pwa-assets": "pwa-assets-generator --preset minimal public/logo.png"
   },
   "devDependencies": {
     "@nuxt/devtools": "latest",
