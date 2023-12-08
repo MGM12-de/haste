@@ -11,6 +11,7 @@ await supabase
     .eq('id', userData?.id)
     .then(({ data, error }) => {
         if (error) {
+            useToast().add({ title: 'User read failed', description: error.message })
             console.log(error)
         } else {
             if (data.length > 0) {
