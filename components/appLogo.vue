@@ -1,4 +1,3 @@
 <template>
-    <UIcon name="i-heroicons-chart-bar" />
-    <UIcon name="i-heroicons-light-bulb" />
+    <NuxtImg src="/logo.jpeg" alt="HaStE Logo" />
 </template>

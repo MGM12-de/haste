@@ -7,11 +7,15 @@
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
-    "postinstall": "nuxt prepare"
+    "postinstall": "nuxt prepare",
+    "generate-pwa-assets": "pwa-assets-generator --preset minimal public/logo.jpeg"
   },
   "devDependencies": {
     "@nuxt/devtools": "latest",
+    "@nuxt/image": "^1.1.0",
     "@nuxtjs/supabase": "^1.1.4",
+    "@vite-pwa/assets-generator": "^0.0.11",
+    "@vite-pwa/nuxt": "^0.3.5",
     "nuxt": "^3.8.2",
     "vue": "^3.3.9",
     "vue-router": "^4.2.5"
