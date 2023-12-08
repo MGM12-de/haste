@@ -22,5 +22,5 @@ await supabase
 </script>
 
 <template>
-    <UAvatar :src="userAvatar" :alt="userData?.email" size="2xl" />
+    <UAvatar :src="userAvatar" :alt="userData?.email" />
 </template>

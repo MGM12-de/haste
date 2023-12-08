@@ -16,7 +16,7 @@
         <template #right>
             <UColorModeButton />
             <UPopover v-if="user">
-                <UAvatar alt="custom user" />
+                <userAvatar />
                 <template #panel>
                     <UVerticalNavigation :links="userLinks" />
                 </template>
