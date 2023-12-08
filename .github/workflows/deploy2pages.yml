@@ -22,7 +22,7 @@ jobs:
       - run: pnpm install
       - run: pnpm run build --preset=github_pages
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v1
+        uses: actions/upload-pages-artifact@v2
         with:
           path: ./.output/public
   # Deployment job
