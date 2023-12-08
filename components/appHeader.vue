@@ -1,7 +1,7 @@
 <template>
     <UHeader :links="links">
         <template #logo>
-            <appLogo class="w-auto h-6" />
+            <appLogo class="w-auto h-12" />
         </template>
 
         <template #center>
