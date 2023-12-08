@@ -10,7 +10,6 @@
 </template>
 
 <script setup lang="ts">
-import type { Team } from '~/types';
 const supabase = useSupabaseClient();
 
 const { pending, data: teams } = await useAsyncData('teams', async () => {
