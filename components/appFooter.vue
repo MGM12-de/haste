@@ -1,5 +1,13 @@
 <script setup>
-const links = []
+const links = [{
+    label: 'About',
+    icon: 'i-heroicons-book-open',
+    to: '/about'
+}, {
+    label: 'Imprint',
+    icon: 'i-heroicons-information-circle',
+    to: '/imprint'
+}]
 </script>
 
 <template>

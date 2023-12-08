@@ -1,6 +1,6 @@
 <template>
     <UPage>
-        <UPageHeader title="About" />
+        <UPageHeader title="Games" />
         <UPageBody>
 
         </UPageBody>

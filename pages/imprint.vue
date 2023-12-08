@@ -1,8 +1,8 @@
 <template>
     <UPage>
-        <UPageHeader title="About" />
+        <UPageHeader title="Imprint" />
         <UPageBody>
-
+            
         </UPageBody>
     </UPage>
 </template>
