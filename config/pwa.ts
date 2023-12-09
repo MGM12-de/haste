@@ -7,7 +7,7 @@ export const pwa: ModuleOptions = {
       name: "Handball statistic expert",
       short_name: "HaStE",
       description: "Handball statistics App",
-      theme_color: "#71BCE1",
+      theme_color: "#0ea5e9",
       lang: "en",
       icons: [
         {
