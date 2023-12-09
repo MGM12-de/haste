@@ -17,6 +17,10 @@
                         <UButton type="submit">
                             {{ item.label }}
                         </UButton>
+                        <br />
+                        <UButton type="button" icon="i-heroicons-globe-alt" @click="signInWithGoogle">
+                            Login with google
+                        </UButton>
                     </UForm>
                 </template>
             </UTabs>
@@ -79,6 +83,20 @@ const register = async () => {
         useToast().add({ title: 'Sign-Up failed', description: error.message })
     } else {
         useToast().add({ title: 'Sign-Up successfully', description: 'You can now access your private data.' })
+        navigateTo('/')
+    }
+}
+
+const signInWithGoogle = async () => {
+    const { error } = await supabase.auth.signInWithOAuth({
+        provider: 'google'
+    })
+
+    console.log(error)
+    if (error) {
+        useToast().add({ title: 'Login failed', description: error.message })
+    } else {
+        useToast().add({ title: 'Login successfully', description: 'You can now access your private data.' })
         navigateTo('/')
     }
 }
