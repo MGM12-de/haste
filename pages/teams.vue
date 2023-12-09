@@ -3,7 +3,7 @@
         <UPageHeader title="Teams" />
         <UPageBody>
 
-            <UTable :rows="teams" :loading="pending">
+            <UTable :columns="columns" :rows="teams" :loading="pending" @select="rowClick">
                 <template #empty-state>
                     <div class="flex flex-col items-center justify-center py-6 gap-3">
                         <span class="italic text-sm">No team found!</span>
@@ -19,9 +19,15 @@
 <script setup lang="ts">
 const supabase = useSupabaseClient();
 
+const columns = [{ key: 'title', label: 'Name' }];
+
 const { pending, data: teams } = await useAsyncData('teams', async () => {
     const { data } = await supabase.from('teams').select('*');
     return data
 });
+
+const rowClick = (row: any) => {
+    navigateTo(`/team/${row.id}`);
+};
 
 </script>
