@@ -12,8 +12,8 @@ dependencies:
     specifier: ^0.5.0
     version: 0.5.0(nuxt@3.8.2)(rollup@2.79.1)(vite@4.5.1)(vue@3.3.9)
   valibot:
-    specifier: ^0.23.0
-    version: 0.23.0
+    specifier: ^0.24.0
+    version: 0.24.0
 
 devDependencies:
   '@nuxt/devtools':
@@ -5632,6 +5632,7 @@ packages:
   /human-signals@2.1.0:
     resolution: {integrity: sha512-B4FFZ6q/T2jhhksgkbEW3HBvWIfDW85snkQgawt07S7J5QXTk6BkNV+0yAeZrM5QpMAdYlocGoljn0sJ/WQkFw==}
     engines: {node: '>=10.17.0'}
+    requiresBuild: true
 
   /human-signals@4.3.1:
     resolution: {integrity: sha512-nZXjEF2nbo7lIw3mgYjItAfgQXog3OjJogSbKa2CQIIvSGWcKgeJnQlNXip6NglNzYH45nSRiEVimMvYL8DDqQ==}
@@ -6417,6 +6418,7 @@ packages:
   /mimic-fn@2.1.0:
     resolution: {integrity: sha512-OqbOk5oEQeAZ8WXWydlu9HJjz9WVdEIvamMCcXmuqUYjTknH/sqsWvhQ3vgwKFRR1HpjvNBKQ37nbJgYzGqGcg==}
     engines: {node: '>=6'}
+    requiresBuild: true
 
   /mimic-fn@4.0.0:
     resolution: {integrity: sha512-vqiC06CuhBTUdZH+RYl8sFrL096vA45Ok5ISO6sE/Mr1jRbGH4Csnhi8f3wKVl7x8mO4Au7Ir9D3Oyv1VYMFJw==}
@@ -7129,6 +7131,7 @@ packages:
   /onetime@5.1.2:
     resolution: {integrity: sha512-kbpaSSGJTWdAY5KPVeMOKXSrPtr8C8C7wodJbcsd51jRnmD+GZu8Y0VoU6Dm5Z4vWr0Ig/1NKuWRKf7j5aaYSg==}
     engines: {node: '>=6'}
+    requiresBuild: true
     dependencies:
       mimic-fn: 2.1.0
 
@@ -8510,6 +8513,7 @@ packages:
   /strip-final-newline@2.0.0:
     resolution: {integrity: sha512-BrpvfNAE3dcvq7ll3xVumzjKjZQ5tI1sEUIKr3Uoks0XUl45St3FlatVqef9prk4jRDzhW6WZg+3bk93y6pLjA==}
     engines: {node: '>=6'}
+    requiresBuild: true
 
   /strip-final-newline@3.0.0:
     resolution: {integrity: sha512-dOESqjYr96iWYylGObzd39EuNTa5VJxyvVAEm5Jnh7KGo75V43Hk1odPQkNDyXNmUR6k+gEiDVXnjB8HJ3crXw==}
@@ -9218,8 +9222,8 @@ packages:
   /util-deprecate@1.0.2:
     resolution: {integrity: sha512-EPD5q1uXyFxJpCrLnCc1nHnq3gOa6DZBocAIiI2TaSCA7VCJ1UJDMagCzIkXNsUYfD1daK//LTEQ8xiIbrHtcw==}
 
-  /valibot@0.23.0:
-    resolution: {integrity: sha512-3draqnQrhygou2FUtVSfdzgCE4icqj6d4+Qg5ercN9WI/JI4hEMqvX2yQXyq7btlaobCGRgZAWMr7kWr3Dtxkw==}
+  /valibot@0.24.0:
+    resolution: {integrity: sha512-OZq+2RmC4CU93Oxw+hL9L73wA7X0I89g2Fd6RR8wtlRFUinW9/gVl9g9h94EWQBHbEFFVG2Xxt2ndMszF66k0A==}
     dev: false
 
   /validate-npm-package-license@3.0.4:
