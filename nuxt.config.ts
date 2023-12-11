@@ -1,4 +1,4 @@
-import { pwa, supabase } from "./config";
+import { pwa, supabase, content } from "./config";
 
 
 // https://nuxt.com/docs/api/configuration/nuxt-config
@@ -8,4 +8,5 @@ export default defineNuxtConfig({
   modules: ['@nuxt/content', '@nuxt/ui', '@nuxtjs/supabase', '@nuxt/image', "@vite-pwa/nuxt"],
   pwa,
   supabase,
+  content,
 })
