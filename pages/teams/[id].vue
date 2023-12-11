@@ -2,6 +2,7 @@
     <UPage>
         <UPageHeader :title="team.title" />
         <UPageBody>
+            <TeamDetail :team="team" />
         </UPageBody>
     </UPage>
 </template>
