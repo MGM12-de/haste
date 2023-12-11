@@ -12,11 +12,11 @@ const state = reactive({
     username: ""
 })
 
-const { data: userName, error } = await useAsyncData('userName', async () => {
-    const { data } = await supabase.from('profiles').select('id, username').eq('id', userData?.id).single();
-    return data?.username
+const { data, error } = await useAsyncData('user', async () => {
+    const { data } = await supabase.from('profiles').select('*').eq('id', userData?.id).single();
+    return data
 });
-state.username = userName;
+state.username = data.value?.username;
 // if (error) {
 //     console.log(error)
 //     useToast().add({ title: 'Get username failed', description: error.message })
