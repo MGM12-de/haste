@@ -1,7 +1,7 @@
 <template>
     <h2>Assigned User</h2>
 
-    <TeamAssignedUserTable :data="data" />
+    <TeamAssignedUserTable :data="data" :team="team" />
 </template>
 
 <script setup lang="ts">

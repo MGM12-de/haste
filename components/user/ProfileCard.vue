@@ -19,7 +19,7 @@ const { data, error } = await useAsyncData('user', async () => {
 state.username = data.value?.username;
 // if (error) {
 //     console.log(error)
-//     useToast().add({ title: 'Get username failed', description: error.message })
+//     ().add({ title: 'Get username failed', description: error.message })
 // } 
 
 const onUpdate = async () => {

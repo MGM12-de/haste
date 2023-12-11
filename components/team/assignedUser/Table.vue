@@ -7,15 +7,26 @@
     </div>
 </template>
 <script setup lang="ts">
+const supabase = useSupabaseClient()
+const user = useSupabaseUser()
+
 const props = defineProps({
     data: {
         type: Object,
         required: true,
     },
+    team: {
+        type: Object,
+        required: true,
+    },
 });
-const { data } = props;
+const { data, team } = props;
 
 const createAssignment = () => {
     console.log('createAssignment')
+    const assignment = { assignedTeam: team.id, userId: user.value.id }
+    supabase.from('assignedTeams').upsert(assignment).then((result) => {
+        useToast().add({ title: 'success', description: result })
+    })
 }
 </script>
