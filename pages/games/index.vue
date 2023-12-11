@@ -2,7 +2,7 @@
     <UPage>
         <UPageHeader title="Games" />
         <UPageBody>
-            <GameTable :games="games" />
+            <GameTable :games="games" :pending="pending" />
             <div class="mt-4 float-right">
                 <GameCreateButton v-if="!games" />
             </div>
