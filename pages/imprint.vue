@@ -1,7 +1,7 @@
 <template>
     <UPage>
         <UPageHeader title="Imprint" />
-        <UPageBody>
+        <UPageBody prose>
             <div>
                 <ContentDoc path="/imprint" />
             </div>
