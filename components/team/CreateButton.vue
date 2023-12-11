@@ -4,6 +4,6 @@
 
 <script setup lang="ts">
 const addTeam = () => {
-    navigateTo('/team/create');
+    navigateTo('/teams/create');
 };
 </script>

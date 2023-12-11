@@ -30,7 +30,7 @@ const { pending, data: teams } = await useAsyncData('teams', async () => {
 });
 
 const rowClick = (row: any) => {
-    navigateTo(`/team/${row.id}`);
+    navigateTo(`/teams/${row.id}`);
 };
 
 </script>
