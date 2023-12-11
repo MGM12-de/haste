@@ -12,7 +12,7 @@
                 </template>
             </UTable>
             <div class="mt-4 float-right">
-                <TeamCreateButton />
+                <TeamCreateButton v-if="!teams" />
             </div>
 
         </UPageBody>

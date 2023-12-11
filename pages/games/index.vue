@@ -7,10 +7,14 @@
                 <template #empty-state>
                     <div class="flex flex-col items-center justify-center py-6 gap-3">
                         <span class="italic text-sm">No game found!</span>
-                        <UButton label="Add Game" />
+                        <GameCreateButton />
                     </div>
                 </template>
             </UTable>
+
+            <div class="mt-4 float-right">
+                <GameCreateButton v-if="!games" />
+            </div>
 
         </UPageBody>
     </UPage>
