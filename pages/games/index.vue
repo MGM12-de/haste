@@ -2,20 +2,10 @@
     <UPage>
         <UPageHeader title="Games" />
         <UPageBody>
-
-            <UTable :rows="games" :loading="pending">
-                <template #empty-state>
-                    <div class="flex flex-col items-center justify-center py-6 gap-3">
-                        <span class="italic text-sm">No game found!</span>
-                        <GameCreateButton />
-                    </div>
-                </template>
-            </UTable>
-
+            <GameTable :games="games" />
             <div class="mt-4 float-right">
                 <GameCreateButton v-if="!games" />
             </div>
-
         </UPageBody>
     </UPage>
 </template>

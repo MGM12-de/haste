@@ -2,7 +2,6 @@
     <UPage>
         <UPageHeader title="Teams" />
         <UPageBody>
-
             <UTable :columns="columns" :rows="teams" :loading="pending" @select="rowClick">
                 <template #empty-state>
                     <div class="flex flex-col items-center justify-center py-6 gap-3">
