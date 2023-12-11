@@ -7,12 +7,12 @@
                 <template #empty-state>
                     <div class="flex flex-col items-center justify-center py-6 gap-3">
                         <span class="italic text-sm">No team found!</span>
-                        <UButton label="Add Team" @click="addTeam()" />
+                        <TeamCreateButton />
                     </div>
                 </template>
             </UTable>
             <div class="mt-4 float-right">
-                <UButton label="Add Team" v-if="teams" @click="addTeam()" />
+                <TeamCreateButton />
             </div>
 
         </UPageBody>
@@ -31,10 +31,6 @@ const { pending, data: teams } = await useAsyncData('teams', async () => {
 
 const rowClick = (row: any) => {
     navigateTo(`/team/${row.id}`);
-};
-
-const addTeam = () => {
-    navigateTo('/team/create');
 };
 
 </script>
