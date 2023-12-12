@@ -24,7 +24,8 @@
         </template>
 
         <template #panel>
-            <UAsideLinks :links="links" />
+            <UAsideLinks :links="loggedLinks" v-if="user" />
+            <UAsideLinks :links="links" v-else />
         </template>
     </UHeader>
 </template>
@@ -34,37 +35,37 @@ const user = useSupabaseUser()
 
 const allLinks = [{
     label: 'Home',
-    icon: 'i-heroicons-home',
+    icon: 'i-mdi-home',
     to: '/'
 }]
 
 const loggedLinks = [...allLinks, {
     label: 'Games',
-    icon: 'i-heroicons-game-controller',
+    icon: 'i-mdi-gamepad-variant',
     to: '/games'
 }, {
     label: 'Teams',
-    icon: 'i-heroicons-users',
+    icon: 'i-mdi-account-group',
     to: '/teams'
 }];
 
 const links = [...allLinks, {
     label: 'Prices',
-    icon: 'i-heroicons-currency-euro',
+    icon: 'i-mdi-currency-eur',
     to: '/prices'
 }, {
     label: 'Login',
-    icon: 'i-heroicons-user-circle',
+    icon: 'i-mdi-account',
     to: '/login'
 }];
 
 const userLinks = [{
     label: 'Profile',
-    icon: 'i-heroicons-user',
+    icon: 'i-mdi-account',
     to: '/profile'
 }, {
     label: 'Logout',
-    icon: 'i-heroicons-arrow-left-on-rectangle',
+    icon: 'i-mdi-logout',
     to: '/logout'
 }]
 </script>

@@ -1,6 +1,6 @@
 <template>
     <UPage>
-        <UPageHeader title="Prices" description="Choose the plan that fits your needs." icon="i-heroicons-user" />
+        <UPageHeader title="Prices" description="Choose the plan that fits your needs." icon="i-mdi-account" />
 
         <UPageBody>
             <UPricingGrid :compact="false">

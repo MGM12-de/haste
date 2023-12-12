@@ -1,11 +1,11 @@
 <script setup>
 const links = [{
     label: 'About',
-    icon: 'i-heroicons-book-open',
+    icon: 'i-mdi-book-open',
     to: '/about'
 }, {
     label: 'Imprint',
-    icon: 'i-heroicons-information-circle',
+    icon: 'i-mdi-information',
     to: '/imprint'
 }]
 </script>
@@ -17,8 +17,7 @@ const links = [{
         </template>
 
         <template #right>
-            <UButton icon="i-simple-icons-github" color="gray" variant="ghost" to="https://github.com/miggi92"
-                target="_blank" />
+            <UButton icon="i-mdi-github" color="gray" variant="ghost" to="https://github.com/miggi92" target="_blank" />
         </template>
     </UFooter>
 </template>

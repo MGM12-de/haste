@@ -1,6 +1,6 @@
 <template>
     <UPage>
-        <UPageHeader title="Login" description="Login to your account or register." icon="i-heroicons-user" />
+        <UPageHeader title="Login" description="Login to your account or register." icon="i-mdi-account" />
 
         <UPageBody>
             <UTabs :items="items" class="w-full">
@@ -18,7 +18,7 @@
                             {{ item.label }}
                         </UButton>
                         <br />
-                        <UButton type="button" icon="i-heroicons-globe-alt" @click="signInWithGoogle">
+                        <UButton type="button" icon="i-mdi-earth" @click="signInWithGoogle">
                             Login with google
                         </UButton>
                     </UForm>
