@@ -17,3 +17,15 @@
         </div>
     </div>
 </template>
+
+<script lang="ts" setup>
+useSchemaOrg([
+    defineOrganization({
+        name: 'MGM12'
+    }),
+    defineWebSite({
+        name: 'mgm12.dev',
+    }),
+    defineWebPage(),
+])
+</script>
