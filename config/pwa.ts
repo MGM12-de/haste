@@ -13,6 +13,7 @@ export const pwa: ModuleOptions = {
     start_url: "/",
     display: "standalone",
     lang: "en",
+    orientation: "portrait",
     icons: [
       {
         src: "pwa-64x64.png",
