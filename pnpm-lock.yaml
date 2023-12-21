@@ -38,8 +38,8 @@ devDependencies:
     specifier: ^2.0.0
     version: 2.0.0(rollup@2.79.1)
   '@vite-pwa/assets-generator':
-    specifier: ^0.2.0
-    version: 0.2.0
+    specifier: ^0.2.1
+    version: 0.2.1
   '@vite-pwa/nuxt':
     specifier: ^0.3.5
     version: 0.3.5(rollup@2.79.1)(vite@5.0.8)(workbox-build@7.0.0)(workbox-window@7.0.0)
@@ -4036,8 +4036,8 @@ packages:
       - encoding
       - supports-color
 
-  /@vite-pwa/assets-generator@0.2.0:
-    resolution: {integrity: sha512-K5OiuNKO9Y+B/xj+LAF5npL1RRzvBqwAM/KFl2N1HMAM5m5bXmykDKLE+YpMS2cREH5cs9PuAqvyOIs95z73aQ==}
+  /@vite-pwa/assets-generator@0.2.1:
+    resolution: {integrity: sha512-NoFsE/XzmkF3WDr+1NjbjdP4GDBZMPQ49eFS33H8FlIH50g4AAK5+W3Y2xeRy7tKE5nB7MLYybesSqk+zD4L0Q==}
     engines: {node: '>=16.14.0'}
     hasBin: true
     dependencies:
