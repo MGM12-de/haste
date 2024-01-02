@@ -17,6 +17,6 @@ const supabase = useSupabaseClient();
 
 
 const { data, pending, error, refresh } = await useFetch('/api/teams');
-const teams = data.value.teams;
+const teams = data.value;
 
 </script>
