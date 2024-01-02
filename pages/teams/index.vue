@@ -12,14 +12,9 @@
 </template>
 
 <script setup lang="ts">
-const supabase = useSupabaseClient();
-
-
-
 const { data, pending, error, refresh } = await useAsyncData(`teams`, async () => {
     const { data } = await useFetch('/api/teams');
     return data
 });
 const teams = data.value;
-
 </script>
