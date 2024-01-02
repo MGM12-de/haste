@@ -14,9 +14,9 @@
 <script setup lang="ts">
 const supabase = useSupabaseClient();
 
-const { pending, data: teams } = await useAsyncData('teams', async () => {
-    const { data } = await supabase.from('teams').select('*');
-    return data
-});
+
+
+const { data, pending, error, refresh } = await useFetch('/api/teams');
+const teams = data.value.teams;
 
 </script>
