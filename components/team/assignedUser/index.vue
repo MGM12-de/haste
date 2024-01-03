@@ -5,7 +5,6 @@
 </template>
 
 <script setup lang="ts">
-const supabase = useSupabaseClient()
 const props = defineProps({
     team: {
         type: Object,
@@ -14,8 +13,8 @@ const props = defineProps({
 });
 const { team } = props;
 
-const { data } = await useAsyncData(`assignedUser${team.id}`, async () => {
-    const { data } = await supabase.from('assignedTeams').select('*').eq('assignedTeam', team.id)
+const { data } = await useAsyncData(`team/${team.id}/assignedUser`, async () => {
+    const { data } = await useFetch(`/api/team/${team.id}/assignedUsers`);
     return data
 });
 </script>
