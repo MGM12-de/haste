@@ -13,7 +13,7 @@ const links = [{
 <template>
     <UFooter :links="links">
         <template #left>
-            Copyright © {{ new Date().getFullYear() }}
+            Copyright © 2023 - {{ new Date().getFullYear() }}
         </template>
 
         <template #right>
