@@ -12,8 +12,10 @@
 </template>
 
 <script setup lang="ts">
+const client = useSupabaseClient()
+
 const { data, pending, error, refresh } = await useAsyncData(`teams`, async () => {
-    const { data } = await useFetch('/api/teams');
+    const { data } = await client.from('teams').select('*');
     return data
 });
 const teams = data.value;

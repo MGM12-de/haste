@@ -12,9 +12,10 @@ const props = defineProps({
     },
 });
 const { team } = props;
+const client = useSupabaseClient()
 
 const { data } = await useAsyncData(`team/${team.id}/assignedUser`, async () => {
-    const { data } = await useFetch(`/api/team/${team.id}/assignedUsers`);
+    const { data } = await client.from('assignedTeams').select('*').eq('assignedTeam', team.id);
     return data
 });
 </script>
