@@ -15,7 +15,7 @@ const { team } = props;
 const client = useSupabaseClient()
 
 const { data } = await useAsyncData(`team/${team.id}/assignedUser`, async () => {
-    const { data } = await client.from('assignedTeams').select('*').eq('assignedTeam', team.id);
+    const { data } = await client.from('assignedTeams').select(`userId, profiles ( * )`).eq('assignedTeam', team.id);
     return data
 });
 </script>

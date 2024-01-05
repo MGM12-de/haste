@@ -1,5 +1,5 @@
 <template>
-    <UTable :rows="data">
+    <UTable :rows="data" :columns="columns">
     </UTable>
     <div class="float-right">
         <UButton label="Create assignment" @click="createAssignment()" />
@@ -9,6 +9,13 @@
 <script setup lang="ts">
 const supabase = useSupabaseClient()
 const user = useSupabaseUser()
+const columns = [
+    {
+        key: 'profiles.username',
+        label: 'Username',
+        sortable: true
+    }
+]
 
 const props = defineProps({
     data: {
