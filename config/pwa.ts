@@ -51,6 +51,7 @@ export const pwa: ModuleOptions = {
   },
   client: {
     installPrompt: true,
+    periodicSyncForUpdates: 3600
   },
   devOptions: {
     enabled: true,
