@@ -14,6 +14,16 @@ const columns = [
         key: 'profiles.username',
         label: 'Username',
         sortable: true
+    },
+    {
+        key: 'profiles.firstName',
+        label: 'First name',
+        sortable: true
+    },
+    {
+        key: 'profiles.lastName',
+        label: 'Last name',
+        sortable: true
     }
 ]
 
