@@ -1,6 +1,8 @@
 <template>
     <UContainer>
         <TeamAssignedUser :team="team" />
+        <br />
+        <TeamPlayers :team="team" />
     </UContainer>
 </template>
 
