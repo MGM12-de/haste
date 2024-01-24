@@ -27,7 +27,7 @@
     "@iconify-json/mdi": "^1.1.63",
     "@nuxt/content": "^2.10.0",
     "@nuxt/ui": "^2.11.1",
-    "@nuxt/ui-pro": "^0.7.0",
+    "@nuxt/ui-pro": "^0.7.3",
     "valibot": "^0.27.0"
   }
 }
