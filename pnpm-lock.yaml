@@ -18,8 +18,8 @@ dependencies:
     specifier: ^0.7.0
     version: 0.7.0(nuxt@3.9.0)(rollup@2.79.1)(vite@5.0.10)(vue@3.4.4)
   valibot:
-    specifier: ^0.27.0
-    version: 0.27.0
+    specifier: ^0.27.1
+    version: 0.27.1
 
 devDependencies:
   '@nuxt/devtools':
@@ -12361,8 +12361,8 @@ packages:
       '@vue/compiler-core': 3.4.4
     dev: true
 
-  /valibot@0.27.0:
-    resolution: {integrity: sha512-1Wv0FfiosoAYruPhueHJgJtgj18KlUoBaIEeCefCEsohStcJQWp3jL59J8Tj9w8jiuQ3USkZGH8BtzDHDGgdxQ==}
+  /valibot@0.27.1:
+    resolution: {integrity: sha512-k57/5/kMwMjiVP0LUMpa+n4ihSemuXshz1ND4fftKw1bkHZYN/TnHcbjaEie3K7FwAceiOgugLZPjSaNxdygeg==}
     dev: false
 
   /validate-npm-package-license@3.0.4:
