@@ -3,64 +3,72 @@
         <UPageHeader title="Login" description="Login to your account or register." icon="i-mdi-account" />
 
         <UPageBody>
-            <UTabs :items="items" class="w-full">
-                <template #item="{ item }">
-                    <UForm :state="state" class="space-y-4" @submit="onClick(item)" :schema="schema">
-                        <UFormGroup label="Email" name="email">
-                            <UInput v-model="state.email" />
-                        </UFormGroup>
+            <UCard class="max-w-sm w-full">
+    <UAuthForm
+      :fields="fields"
+      :validate="validate"
+      :providers="providers"
+      title="Welcome back!"
+      align="top"
+      icon="i-heroicons-lock-closed"
+      :ui="{ base: 'text-center', footer: 'text-center' }"
+      @submit="onSubmit"
+    >
+      <template #description>
+        Don't have an account? <NuxtLink to="/" class="text-primary font-medium">Sign up</NuxtLink>.
+      </template>
 
-                        <UFormGroup label="Password" name="password">
-                            <UInput v-model="state.password" type="password" />
-                        </UFormGroup>
+      <template #password-hint>
+        <NuxtLink to="/" class="text-primary font-medium">Forgot password?</NuxtLink>
+      </template>
 
-                        <UButton type="submit">
-                            {{ item.label }}
-                        </UButton>
-                        <br />
-                        <UButton type="button" icon="i-mdi-earth" @click="signInWithGoogle">
-                            Login with google
-                        </UButton>
-                    </UForm>
-                </template>
-            </UTabs>
+      <template #footer>
+        By signing in, you agree to our <NuxtLink to="/" class="text-primary font-medium">Terms of Service</NuxtLink>.
+      </template>
+    </UAuthForm>
+  </UCard>
         </UPageBody>
     </UPage>
 </template>
 
 <script setup lang="ts">
-import { string, objectAsync, email, minLength, type Input } from 'valibot'
-import type { FormSubmitEvent, TabItem } from '#ui/types'
-
-const items = [{ key: 'login', label: 'Login' }, { key: 'register', label: 'Register' }]
-
+import type { FormError } from '#ui/types'
 const supabase = useSupabaseClient()
 
-const schema = objectAsync({
-    email: string([email('Invalid email')]),
-    password: string([minLength(8, 'Must be at least 8 characters')])
-})
-type Schema = Input<typeof schema>
 
-const state = reactive({
-    email: ref(''),
-    password: ref('')
-})
+const fields = [{
+  name: 'email',
+  type: 'text',
+  label: 'Email',
+  placeholder: 'Enter your email'
+}, {
+  name: 'password',
+  label: 'Password',
+  type: 'password',
+  placeholder: 'Enter your password'
+}]
 
-const onClick = async (item: TabItem) => {
-    if (item.key === 'login') {
-        login()
-    } else {
-        register()
-    }
+const validate = (state: any) => {
+  const errors: FormError[] = []
+  if (!state.email) errors.push({ path: 'email', message: 'Email is required' })
+  if (!state.password) errors.push({ path: 'password', message: 'Password is required' })
+  return errors
 }
 
+const providers = [{
+  label: 'Continue with Google',
+  icon: 'i-mdi-google',
+  color: 'white' as const,
+  click: () => {
+    signInWithGoogle()
+  }
+}]
 
-const login = async () => {
-
-    const { error } = await supabase.auth.signInWithPassword({
-        email: state.email,
-        password: state.password
+async function onSubmit (data: any) {
+  console.log('Submitted', data)
+  const { error } = await supabase.auth.signInWithPassword({
+        email: data.email,
+        password: data.password
     })
 
     console.log(error)
@@ -72,20 +80,19 @@ const login = async () => {
     }
 }
 
-const register = async () => {
-    const { error } = await supabase.auth.signUp({
-        email: state.email,
-        password: state.password
-    })
-
-    console.log(error)
-    if (error) {
-        useToast().add({ title: 'Sign-Up failed', description: error.message })
-    } else {
-        useToast().add({ title: 'Sign-Up successfully', description: 'You can now access your private data.' })
-        navigateTo('/')
-    }
-}
+// const register = async () => {
+//     const { error } = await supabase.auth.signUp({
+//         email: state.email,
+//         password: state.password
+//     })
+//     console.log(error)
+//     if (error) {
+//         useToast().add({ title: 'Sign-Up failed', description: error.message })
+//     } else {
+//         useToast().add({ title: 'Sign-Up successfully', description: 'You can now access your private data.' })
+//         navigateTo('/')
+//     }
+// }
 
 const signInWithGoogle = async () => {
     const { error } = await supabase.auth.signInWithOAuth({
