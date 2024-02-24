@@ -5,7 +5,7 @@ import { pwa, supabase, content, stripe } from "./config";
 export default defineNuxtConfig({
   devtools: { enabled: true },
   extends: ["@nuxt/ui-pro"],
-  modules: ['@nuxt/content', '@nuxt/ui', '@nuxtjs/supabase', '@nuxt/image', "@vite-pwa/nuxt", '@nuxtseo/module', 'nuxt-schema-org', '@unlok-co/nuxt-stripe'],
+  modules: ['@nuxt/content', '@nuxt/ui', '@nuxtjs/supabase', '@nuxt/image', "@vite-pwa/nuxt", '@nuxtjs/seo', 'nuxt-schema-org', '@unlok-co/nuxt-stripe'],
   site: {
     url: 'https://haste.mgm12.dev',
     name: 'HaStE',
