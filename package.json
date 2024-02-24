@@ -1,7 +1,9 @@
 {
-  "name": "nuxt-app",
+  "name": "mgm12-haste",
   "private": true,
   "type": "module",
+  "version": "0.1.0",
+  "packageManager": "pnpm@8.15.1",
   "scripts": {
     "build": "nuxt build",
     "dev": "nuxt dev",
