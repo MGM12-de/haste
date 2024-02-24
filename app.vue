@@ -11,6 +11,7 @@ onMounted(() => {
       description: 'New version available, please refresh',
       actions: [{
         label: 'Refresh',
+        icon: 'i-mdi-refresh',
         click: () => $pwa.updateServiceWorker(),
       }],
     })
