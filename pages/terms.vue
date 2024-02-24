@@ -2,9 +2,11 @@
   <div>
     <UPage>
       <UPageHeader title="Terms of Service" />
-      <UPageBody>
-        <p>Still to be done</p>
-      </UPageBody>
+      <UPageBody prose>
+            <div>
+                <ContentDoc path="/terms" />
+            </div>
+        </UPageBody>
 
     </UPage>
     
