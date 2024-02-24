@@ -1,10 +1,10 @@
 {
-    "recommendations": [
-        "antfu.iconify",
-        "nuxt.mdc",
-        "bradlc.vscode-tailwindcss",
-        "vue.volar",
-        "vue.vscode-typescript-vue-plugin",
-        "lukas-tr.materialdesignicons-intellisense"
-    ]
+  "recommendations": [
+    "antfu.iconify",
+    "nuxt.mdc",
+    "bradlc.vscode-tailwindcss",
+    "vue.volar",
+    "vue.vscode-typescript-vue-plugin",
+    "lukas-tr.materialdesignicons-intellisense"
+  ]
 }

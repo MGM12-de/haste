@@ -1,3 +1,3 @@
 <template>
-    <NuxtImg src="/logo.png" alt="HaStE Logo" />
+  <NuxtImg src="/logo.png" alt="HaStE Logo" />
 </template>

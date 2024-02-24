@@ -1,9 +1,9 @@
-<template>
-    <UButton label="Add Game" @click="addGame()" />
-</template>
-
 <script setup lang="ts">
-const addGame = () => {
-    navigateTo('/games/create');
-};
+function addGame() {
+  navigateTo('/games/create')
+}
 </script>
+
+<template>
+  <UButton label="Add Game" @click="addGame()" />
+</template>

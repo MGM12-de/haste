@@ -1,8 +1,6 @@
 <template>
-    <UPage>
-        <UPageHeader title="About" />
-        <UPageBody>
-
-        </UPageBody>
-    </UPage>
+  <UPage>
+    <UPageHeader title="About" />
+    <UPageBody />
+  </UPage>
 </template>

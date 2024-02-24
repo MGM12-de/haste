@@ -1,8 +1,8 @@
 <template>
-    <UPage>
-        <UPageHeader title="Profile" />
-        <UPageBody>
-            <UserProfileCard />
-        </UPageBody>
-    </UPage>
+  <UPage>
+    <UPageHeader title="Profile" />
+    <UPageBody>
+      <UserProfileCard />
+    </UPageBody>
+  </UPage>
 </template>

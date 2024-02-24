@@ -1,3 +1,3 @@
-import type { ModuleOptions } from "@nuxt/content";
+import type { ModuleOptions } from '@nuxt/content'
 
-export const content: ModuleOptions = {};
+export const content: ModuleOptions = {}

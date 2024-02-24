@@ -1,9 +1,9 @@
-<template>
-    <UButton label="Add Team" @click="addTeam()" />
-</template>
-
 <script setup lang="ts">
-const addTeam = () => {
-    navigateTo('/teams/create');
-};
+function addTeam() {
+  navigateTo('/teams/create')
+}
 </script>
+
+<template>
+  <UButton label="Add Team" @click="addTeam()" />
+</template>
