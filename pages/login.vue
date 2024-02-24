@@ -1,34 +1,27 @@
 <template>
-    <UPage>
-        <UPageHeader title="Login" description="Login to your account or register." icon="i-mdi-account" />
+  <UPage>
+    <UPageHeader title="Login" description="Login to your account or register." icon="i-mdi-account" />
 
-        <UPageBody>
-            <UCard class="max-w-sm w-full">
-    <UAuthForm
-      :fields="fields"
-      :validate="validate"
-      :providers="providers"
-      title="Welcome back!"
-      align="top"
-      icon="i-mdi-lock"
-      :ui="{ base: 'text-center', footer: 'text-center' }"
-      @submit="onSubmit"
-    >
-      <template #description>
-        Don't have an account? <NuxtLink to="/signup" class="text-primary font-medium">Sign up</NuxtLink>.
-      </template>
+    <UPageBody>
+      <UCard class="max-w-sm w-full">
+        <UAuthForm :fields="fields" :validate="validate" :providers="providers" title="Welcome back!" align="top"
+          icon="i-mdi-lock" :ui="{ base: 'text-center', footer: 'text-center' }" @submit="onSubmit">
+          <template #description>
+            Don't have an account? <NuxtLink to="/signup" class="text-primary font-medium">Sign up</NuxtLink>.
+          </template>
 
-      <template #password-hint>
-        <NuxtLink to="/forgot-password" class="text-primary font-medium">Forgot password?</NuxtLink>
-      </template>
+          <template #password-hint>
+            <NuxtLink to="/forgot-password" class="text-primary font-medium">Forgot password?</NuxtLink>
+          </template>
 
-      <template #footer>
-        By signing in, you agree to our <NuxtLink to="/terms" class="text-primary font-medium">Terms of Service</NuxtLink>.
-      </template>
-    </UAuthForm>
-  </UCard>
-        </UPageBody>
-    </UPage>
+          <template #footer>
+            By signing in, you agree to our <NuxtLink to="/terms" class="text-primary font-medium">Terms of Service
+            </NuxtLink>.
+          </template>
+        </UAuthForm>
+      </UCard>
+    </UPageBody>
+  </UPage>
 </template>
 
 <script setup lang="ts">
@@ -64,47 +57,33 @@ const providers = [{
   }
 }]
 
-async function onSubmit (data: any) {
+async function onSubmit(data: any) {
   console.log('Submitted', data)
   const { error } = await supabase.auth.signInWithPassword({
-        email: data.email,
-        password: data.password
-    })
+    email: data.email,
+    password: data.password
+  })
 
-    console.log(error)
-    if (error) {
-        useToast().add({ title: 'Login failed', description: error.message })
-    } else {
-        useToast().add({ title: 'Login successfully', description: 'You can now access your private data.' })
-        navigateTo('/')
-    }
+  console.log(error)
+  if (error) {
+    useToast().add({ title: 'Login failed', description: error.message })
+  } else {
+    useToast().add({ title: 'Login successfully', description: 'You can now access your private data.' })
+    navigateTo('/')
+  }
 }
 
-// const register = async () => {
-//     const { error } = await supabase.auth.signUp({
-//         email: state.email,
-//         password: state.password
-//     })
-//     console.log(error)
-//     if (error) {
-//         useToast().add({ title: 'Sign-Up failed', description: error.message })
-//     } else {
-//         useToast().add({ title: 'Sign-Up successfully', description: 'You can now access your private data.' })
-//         navigateTo('/')
-//     }
-// }
-
 const signInWithGoogle = async () => {
-    const { error } = await supabase.auth.signInWithOAuth({
-        provider: 'google'
-    })
+  const { error } = await supabase.auth.signInWithOAuth({
+    provider: 'google'
+  })
 
-    console.log(error)
-    if (error) {
-        useToast().add({ title: 'Login failed', description: error.message })
-    } else {
-        useToast().add({ title: 'Login successfully', description: 'You can now access your private data.' })
-        navigateTo('/')
-    }
+  console.log(error)
+  if (error) {
+    useToast().add({ title: 'Login failed', description: error.message })
+  } else {
+    useToast().add({ title: 'Login successfully', description: 'You can now access your private data.' })
+    navigateTo('/')
+  }
 }
 </script>
