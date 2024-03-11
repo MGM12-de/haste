@@ -47,8 +47,8 @@ devDependencies:
     specifier: 2.0.0-rc.8
     version: 2.0.0-rc.8(@lezer/common@1.2.1)(@nuxt/devtools@1.0.8)(@unhead/shared@1.8.10)(@vue/compiler-core@3.4.19)(h3@1.10.2)(nuxt@3.10.3)(postcss@8.4.35)(rollup@2.79.1)(unhead@1.8.10)(vite@5.1.4)(vue@3.4.19)(webpack@5.90.3)
   '@nuxtjs/supabase':
-    specifier: ^1.1.6
-    version: 1.1.6(rollup@2.79.1)
+    specifier: ^1.1.7
+    version: 1.1.7(rollup@2.79.1)
   '@unlok-co/nuxt-stripe':
     specifier: ^2.0.0
     version: 2.0.0(rollup@2.79.1)
@@ -3301,11 +3301,11 @@ packages:
       - webpack
     dev: true
 
-  /@nuxtjs/supabase@1.1.6(rollup@2.79.1):
-    resolution: {integrity: sha512-J54Ey54ddVGx9wkp9jZK/h2qwIwx3NZ6GsHrfAcu7k0CdGHsBDGhmGUtH0zOCexn8qIQKE56oexBXt95BbvQUA==}
+  /@nuxtjs/supabase@1.1.7(rollup@2.79.1):
+    resolution: {integrity: sha512-A6nwAA3JjIxMyLvRqBowoALW3U5LVWHP6mK2oXdYsn7nDH0FH9Z3P0ZXr1ivS8RN5CPXkRAW9kuZE/iXuyFILg==}
     dependencies:
       '@nuxt/kit': 3.10.3(rollup@2.79.1)
-      '@supabase/supabase-js': 2.39.3
+      '@supabase/supabase-js': 2.39.7
       defu: 6.1.4
       pathe: 1.1.2
     transitivePeerDependencies:
@@ -4104,8 +4104,8 @@ packages:
       - typescript
     dev: true
 
-  /@supabase/functions-js@2.2.0:
-    resolution: {integrity: sha512-lAmxD/mZ8vk2mg1CmXQWzK5mOHk7kDxAnxoyqUj2BVPvacEZ52P8nFkInEuSMqx6P6FKy64selW1Vyhui9racA==}
+  /@supabase/functions-js@2.1.5:
+    resolution: {integrity: sha512-BNzC5XhCzzCaggJ8s53DP+WeHHGT/NfTsx2wUSSGKR2/ikLFQTBCDzMvGz/PxYMqRko/LwncQtKXGOYp1PkPaw==}
     dependencies:
       '@supabase/node-fetch': 2.6.15
     dev: true
@@ -4123,8 +4123,8 @@ packages:
       whatwg-url: 5.0.0
     dev: true
 
-  /@supabase/postgrest-js@1.11.0:
-    resolution: {integrity: sha512-Q2WwEid0I2rZfSZ0hDjmI20Fhu31Hzl4bwYTGJjLNMGbUOLoAQSaw0Hv/yHLZnl6OmOrH/trZqDiE5WocHN0oQ==}
+  /@supabase/postgrest-js@1.9.2:
+    resolution: {integrity: sha512-I6yHo8CC9cxhOo6DouDMy9uOfW7hjdsnCxZiaJuIVZm1dBGTFiQPgfMa9zXCamEWzNyWRjZvupAUuX+tqcl5Sw==}
     dependencies:
       '@supabase/node-fetch': 2.6.15
     dev: true
@@ -4147,13 +4147,13 @@ packages:
       '@supabase/node-fetch': 2.6.15
     dev: true
 
-  /@supabase/supabase-js@2.39.3:
-    resolution: {integrity: sha512-NoltJSaJNKDJNutO5sJPAAi5RIWrn1z2XH+ig1+cHDojT6BTN7TvZPNa3Kq3gFQWfO5H1N9El/bCTZJ3iFW2kQ==}
+  /@supabase/supabase-js@2.39.7:
+    resolution: {integrity: sha512-1vxsX10Uhc2b+Dv9pRjBjHfqmw2N2h1PyTg9LEfICR3x2xwE24By1MGCjDZuzDKH5OeHCsf4it6K8KRluAAEXA==}
     dependencies:
-      '@supabase/functions-js': 2.2.0
+      '@supabase/functions-js': 2.1.5
       '@supabase/gotrue-js': 2.62.2
       '@supabase/node-fetch': 2.6.15
-      '@supabase/postgrest-js': 1.11.0
+      '@supabase/postgrest-js': 1.9.2
       '@supabase/realtime-js': 2.9.3
       '@supabase/storage-js': 2.5.5
     transitivePeerDependencies:
