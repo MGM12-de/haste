@@ -1,9 +1,15 @@
 <script setup lang="ts">
 const client = useSupabaseClient()
-const user = useSupabaseUser()
+const supabase = useSupabaseClient()
+
 const state = reactive({
   homeTeam: ref(''),
   awayTeam: ref(''),
+})
+
+const { data: leagueTeams } = await useAsyncData(`league`, async () => {
+  const { data } = await supabase.from('teams').select('*')
+  return data
 })
 
 async function onCreate() {
@@ -16,10 +22,18 @@ async function onCreate() {
 <template>
   <UForm :state="state" class="space-y-4" @submit="onCreate()">
     <UFormGroup label="Home team" name="homeTeam">
-      <UInput v-model="state.homeTeam" />
+      <UInputMenu
+        v-model="state.homeTeam" :options="leagueTeams"
+        value-attribute="id"
+        option-attribute="title"
+      />
     </UFormGroup>
     <UFormGroup label="Away team" name="awayTeam">
-      <UInput v-model="state.awayTeam" />
+      <UInputMenu
+        v-model="state.awayTeam" :options="leagueTeams"
+        value-attribute="id"
+        option-attribute="title"
+      />
     </UFormGroup>
     <UButton type="submit" label="Create Game" />
   </UForm>
