@@ -55,7 +55,7 @@ async function signInWithGoogle() {
     provider: 'google',
   })
 
-  console.log(error)
+
   if (error) {
     useToast().add({ title: 'Login failed', description: error.message })
   }
