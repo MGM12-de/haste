@@ -19,7 +19,6 @@
     "@nuxt/ui": "^2.14.2",
     "@nuxt/ui-pro": "^1.0.2",
     "date-fns": "^3.6.0",
-    "nuxt": "^3.11.1",
     "nuxt-schema-org": "^3.3.6",
     "v-calendar": "^3.1.2",
     "valibot": "^0.30.0",
@@ -37,6 +36,7 @@
     "@vite-pwa/assets-generator": "^0.2.4",
     "@vite-pwa/nuxt": "^0.6.0",
     "eslint": "^8.57.0",
+    "nuxt": "^3.11.1",
     "typescript": "^5.4.3"
   }
 }
