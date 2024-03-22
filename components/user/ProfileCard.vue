@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { format, formatRelative } from 'date-fns'
+
 const user = useSupabaseUser()
 const supabase = useSupabaseClient()
 
@@ -68,7 +70,7 @@ async function onUpdate() {
     </UForm>
 
     <template #footer>
-      <p>Last sign-in: {{ userData?.last_sign_in_at }}</p>
+      <p>Last sign-in: {{ formatRelative(new Date(userData?.last_sign_in_at || ''), new Date()) }}</p>
     </template>
   </UCard>
 </template>
