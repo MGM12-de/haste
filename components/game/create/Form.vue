@@ -1,10 +1,13 @@
 <script setup lang="ts">
+import { format } from 'date-fns'
+
 const client = useSupabaseClient()
 const supabase = useSupabaseClient()
 
 const state = reactive({
   homeTeam: ref(''),
   awayTeam: ref(''),
+  gameTime: ref(new Date()),
 })
 
 const { data: leagueTeams } = await useAsyncData(`league`, async () => {
@@ -21,6 +24,15 @@ async function onCreate() {
 
 <template>
   <UForm :state="state" class="space-y-4" @submit="onCreate()">
+    <UFormGroup label="Game Time" name="gameTime">
+      <UPopover :popper="{ placement: 'bottom-start' }">
+        <UButton icon="i-mdi-calendar" :label="format(state.gameTime, 'dd.MM.yyyy')" />
+
+        <template #panel="{ close }">
+          <DatePicker v-model="state.gameTime" @close="close" />
+        </template>
+      </UPopover>
+    </UFormGroup>
     <UFormGroup label="Home team" name="homeTeam">
       <UInputMenu
         v-model="state.homeTeam" :options="leagueTeams"
