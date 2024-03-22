@@ -12,7 +12,7 @@ const props = defineProps({
 const { games, pending } = props
 
 function rowClick(row: any) {
-  navigateTo(`/game/${row.id}`)
+  navigateTo(`/games/${row.id}`)
 }
 </script>
 

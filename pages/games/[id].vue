@@ -10,7 +10,7 @@ const { data: game, error } = await useAsyncData(`game`, async () => {
 
 <template>
   <UPage>
-    <UPageHeader :title="game.title" />
+    <UPageHeader :title="`${game?.homeTeam} vs ${game?.awayTeam}`" />
     <UPageBody />
   </UPage>
 </template>
