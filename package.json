@@ -31,7 +31,7 @@
     "@nuxt/devtools": "latest",
     "@nuxt/image": "^1.4.0",
     "@nuxtjs/seo": "2.0.0-rc.9",
-    "@nuxtjs/supabase": "^1.1.7",
+    "@nuxtjs/supabase": "^1.2.0",
     "@unlok-co/nuxt-stripe": "^2.0.0",
     "@vite-pwa/assets-generator": "^0.2.4",
     "@vite-pwa/nuxt": "^0.6.0",
