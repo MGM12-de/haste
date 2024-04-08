@@ -29,7 +29,14 @@ const providers = [{
   icon: 'i-mdi-google',
   color: 'white' as const,
   click: () => {
-    signInWithGoogle()
+    signInWithOAuth('google')
+  },
+},{
+  label: 'Continue with GitHub',
+  icon: 'i-mdi-github',
+  color: 'white' as const,
+  click: () => {
+    signInWithOAuth('github')
   },
 }]
 
@@ -50,11 +57,10 @@ async function onSubmit(data: any) {
   }
 }
 
-async function signInWithGoogle() {
+async function signInWithOAuth(provider) {
   const { error } = await supabase.auth.signInWithOAuth({
-    provider: 'google',
+    provider: provider,
   })
-
 
   if (error) {
     useToast().add({ title: 'Login failed', description: error.message })
