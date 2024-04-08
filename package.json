@@ -29,7 +29,7 @@
     "@antfu/eslint-config": "^2.9.0",
     "@iconify-json/mdi": "^1.1.64",
     "@nuxt/devtools": "latest",
-    "@nuxt/image": "^1.4.0",
+    "@nuxt/image": "^1.5.0",
     "@nuxtjs/seo": "2.0.0-rc.9",
     "@nuxtjs/supabase": "^1.1.7",
     "@unlok-co/nuxt-stripe": "^2.0.0",
