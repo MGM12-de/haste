@@ -27,7 +27,7 @@
   },
   "devDependencies": {
     "@antfu/eslint-config": "^2.9.0",
-    "@iconify-json/mdi": "^1.1.64",
+    "@iconify-json/mdi": "^1.1.66",
     "@nuxt/devtools": "latest",
     "@nuxt/image": "^1.4.0",
     "@nuxtjs/seo": "2.0.0-rc.9",
