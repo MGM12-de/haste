@@ -23,7 +23,7 @@
     "v-calendar": "^3.1.2",
     "valibot": "^0.30.0",
     "vue": "^3.4.21",
-    "vue-router": "^4.3.0"
+    "vue-router": "^4.3.2"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^2.13.0",
