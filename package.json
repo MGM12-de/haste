@@ -22,7 +22,7 @@
     "nuxt-schema-org": "^3.3.6",
     "v-calendar": "^3.1.2",
     "valibot": "^0.30.0",
-    "vue": "^3.4.21",
+    "vue": "^3.4.25",
     "vue-router": "^4.3.0"
   },
   "devDependencies": {
