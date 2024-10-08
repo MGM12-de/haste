@@ -32,7 +32,7 @@
     "@nuxt/image": "^1.7.0",
     "@nuxtjs/seo": "2.0.0-rc.10",
     "@nuxtjs/supabase": "^1.2.2",
-    "@unlok-co/nuxt-stripe": "^2.0.0",
+    "@unlok-co/nuxt-stripe": "^4.0.1",
     "@vite-pwa/assets-generator": "^0.2.4",
     "@vite-pwa/nuxt": "^0.7.0",
     "eslint": "^8.57.0",
