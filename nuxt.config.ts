@@ -9,9 +9,7 @@ export default defineNuxtConfig({
     url: 'https://haste.mgm12.dev',
     name: 'HaStE',
   },
-  ui: {
-    icons: ['mdi'],
-  },
+  ui: {},
   pwa,
   supabase,
   content,
