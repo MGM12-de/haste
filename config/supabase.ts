@@ -7,4 +7,7 @@ export const supabase: ModuleOptions = {
     callback: '/confirm',
     exclude: ['/', '/prices', '/about', '/imprint', '/contact'],
   },
+  url: '',
+  key: '',
+  serviceKey: ''
 }
