@@ -3,7 +3,7 @@
   "type": "module",
   "version": "0.1.0",
   "private": true,
-  "packageManager": "pnpm@8.15.8",
+  "packageManager": "pnpm@9.15.0",
   "scripts": {
     "build": "nuxt build",
     "dev": "nuxt dev",
@@ -15,28 +15,28 @@
     "lint:fix": "eslint . --fix"
   },
   "dependencies": {
-    "@nuxt/content": "^2.12.1",
-    "@nuxt/ui": "^2.15.2",
-    "@nuxt/ui-pro": "^1.1.0",
-    "date-fns": "^3.6.0",
-    "nuxt-schema-org": "^3.3.6",
+    "@nuxt/content": "^2.13.4",
+    "@nuxt/ui": "^2.20.0",
+    "@nuxt/ui-pro": "^1.6.0",
+    "date-fns": "^4.1.0",
+    "nuxt-schema-org": "^4.0.4",
     "v-calendar": "^3.1.2",
-    "valibot": "^0.30.0",
-    "vue": "^3.4.27",
-    "vue-router": "^4.3.2"
+    "valibot": "^0.42.1",
+    "vue": "^3.5.13",
+    "vue-router": "^4.5.0"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "^2.16.2",
-    "@iconify-json/mdi": "^1.1.66",
+    "@antfu/eslint-config": "^3.12.0",
+    "@iconify-json/mdi": "^1.2.2",
     "@nuxt/devtools": "latest",
-    "@nuxt/image": "^1.7.0",
+    "@nuxt/image": "^1.8.1",
     "@nuxtjs/seo": "2.0.0-rc.10",
-    "@nuxtjs/supabase": "^1.2.2",
-    "@unlok-co/nuxt-stripe": "^2.0.0",
-    "@vite-pwa/assets-generator": "^0.2.4",
-    "@vite-pwa/nuxt": "^0.7.0",
-    "eslint": "^8.57.0",
-    "nuxt": "^3.11.2",
-    "typescript": "^5.4.5"
+    "@nuxtjs/supabase": "^1.4.5",
+    "@unlok-co/nuxt-stripe": "^4.0.1",
+    "@vite-pwa/assets-generator": "^0.2.6",
+    "@vite-pwa/nuxt": "^0.10.6",
+    "eslint": "^9.17.0",
+    "nuxt": "^3.14.1592",
+    "typescript": "^5.7.2"
   }
 }
