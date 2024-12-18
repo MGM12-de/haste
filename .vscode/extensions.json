@@ -4,7 +4,6 @@
     "nuxt.mdc",
     "bradlc.vscode-tailwindcss",
     "vue.volar",
-    "vue.vscode-typescript-vue-plugin",
     "lukas-tr.materialdesignicons-intellisense"
   ]
 }
